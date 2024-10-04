@@ -20,3 +20,5 @@ export default class Cl_vCliente{
             this.vista.hidden = true;
         }   
     }
+// es moonto no cantidad
+//

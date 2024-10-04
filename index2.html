@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="mainForm_inicial">
+        <h4>Este mensaje saldra apenas cargue la pagina pero luego que esta modifique esta desaparecera</h4>
+    </div>
+</body>
+<script>
+        // Verificar si el mensaje ya fue mostrado anteriormente
+        if (sessionStorage.getItem('messageShown')) {
+            // Si ya fue mostrado, ocultar el mensaje
+            document.getElementById('mainForm_inicial').style.display = 'none'
+        };
+        
+</script>
+</html>

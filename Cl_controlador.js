@@ -25,11 +25,11 @@ export default class Cl_controlador {
             cedula: cliente.cedula, 
             denominacion: cliente.denominacion,
             cantidad: cliente.cantidad,
-            montT: cliente.calcMont(),
-            mIb10: this.mBodega.mFb10(),
-            mIb20: this.mBodega.mFb20(),
-            mIb50: this.mBodega.mFb50(),
-            montF: this.mBodega.calcMontFi()
+            montT: cliente.calcMont().toFixed(2),
+            mIb10: this.mBodega.mFb10().toFixed(2),
+            mIb20: this.mBodega.mFb20().toFixed(2),
+            mIb50: this.mBodega.mFb50().toFixed(2),
+            montF: this.mBodega.calcMontFi().toFixed(2)
         });
         this.mostrarVistaBodega();
     }

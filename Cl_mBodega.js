@@ -1,19 +1,19 @@
 export default class Cl_mbodega{
     constructor(){
-        this.mIb10=50;
-        this.mIb20=2;
-        this.mIb50=10;
+        this.mIb10=5*10;
+        this.mIb20=2*20;
+        this.mIb50=10*50;
         this.mFT=0;
     }
     procesarCliente(cliente){
         if(cliente.denominacion == 10){
-            this.mIb10 += cliente.cantidad;
+            this.mIb10 += cliente.cantidad*10;
         }
         if(cliente.denominacion == 20){
-            this.mIb20 += cliente.cantidad;
+            this.mIb20 += cliente.cantidad*20;
         }
         if(cliente.denominacion == 50){
-            this.mIb50 += cliente.cantidad;
+            this.mIb50 += cliente.cantidad*50;
         }
         this.mFT += cliente.calcMont();
     }
@@ -27,6 +27,6 @@ export default class Cl_mbodega{
         return this.mIb50
     }
     calcMontFi(){
-        return this.mFb10()*10 + this.mFb20()*20 + this.mFb50()*50;
+        return this.mFb10() + this.mFb20() + this.mFb50();
     }
 }

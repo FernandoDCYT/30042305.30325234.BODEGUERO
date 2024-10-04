@@ -30,9 +30,9 @@ export default class Cl_vBodega{
         this.tabla.innerHTML += `
         <tr>
         <td>${cedula}</td>
-        <td>${denominacion}</td>
+        <td>${denominacion}$</td>
         <td>${cantidad}</td>
-        <td>${montT}</td>
+        <td>${montT}$</td>
         </tr> `;
 
         this.lblB10.innerHTML = mIb10;
