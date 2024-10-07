@@ -9,12 +9,15 @@
 </head>
 <body>
     <section id="mainForm"> 
-        <h1><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bodega</strong></h1>
-        <section id="mainForm_inicial">
-            <br> 
-            
+        <h1 style="text-indent: 30px;">Bodega</strong></h1>
+        <p class="box" style="margin: 20px;" id="mainForm_inicial">
+            Cantidad inicial:
+            <br>10$: <span id="mainForm_cB10"></span> Billetes
+            <br>20$: <span id="mainForm_cB20"></span> Billetes
+            <br>50$: <span id="mainForm_cB50"></span> Billetes
             <br><br>
-        </section>
+        </p>
+        <section id="mainForm_2" style="display: none;">
         <table id="mainForm_tabla">
             <br>
             <tr>
@@ -24,22 +27,29 @@
                 <th>Monto Cuenta</th>
             </tr>
         </table>
-        <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Monto final de billetes de $10: <span id="mainForm_b10">?</span>$</h4>
-        <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Monto final de billetes de $20: <span id="mainForm_b20">?</span>$</h4>
-        <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Monto final de billetes de $50: <span id="mainForm_b50">?</span>$</h4>
-        <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Al bodeguero le queda un monto total de: <span id="mainForm_montT">?</span>$</h4>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button id="mainForm_agregarCliente">Agregar Cliente</button>
+        <ul id="mainForm_final">
+            <li><h4>Monto final de billetes de $10: <span id="mainForm_b10">?</span>$</h4></li>
+            <li><h4>Monto final de billetes de $20: <span id="mainForm_b20">?</span>$</h4></li>
+            <li><h4>Monto final de billetes de $50: <span id="mainForm_b50">?</span>$</h4></li>
+            <li><h4>Al bodeguero le queda un monto total de: <span id="mainForm_montT">?</span>$</h4></li>
+        <br>
+        </ul>
+        </section>
+        <br>
+        <button id="mainForm_agregarCliente">Agregar Cliente</button>
         <br><br>
     </section>
-
+    
+    
+    
     <section id="clienteForm">
-        <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Datos Cliente</h3>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="clienteForm_inCedula" placeholder="Cedula"></input> <br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="clienteForm_inDenominacion" placeholder="Denominacion"></input><br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="clienteForm_inCantidad" placeholder="Cantidad"></input><br>
+        <h3>Datos Cliente</h3>
+        <input type="text" id="clienteForm_inCedula" placeholder="Cedula"></input> <br>
+        <input type="text" id="clienteForm_inDenominacion" placeholder="Denominacion"></input><br>
+        <input type="text" id="clienteForm_inCantidad" placeholder="Cantidad"></input><br>
         <br>
         <br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button id="clienteForm_btAceptar">Aceptar</button>
+        <button id="clienteForm_btAceptar">Aceptar</button>
         <br>
         <br>
     
@@ -52,6 +62,8 @@
     document.getElementById('clienteForm_btAceptar').addEventListener('click',  () => {
             // Ocultar el mensaje del mainForm_inicial
             document.getElementById('mainForm_inicial').style.display = 'none';
+            // Mostrar resultados finales mainForm_final
+            document.getElementById('mainForm_2').style.display = 'block';
     });
 </script>
 </html>

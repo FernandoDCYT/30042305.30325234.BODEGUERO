@@ -13,3 +13,9 @@ section {
     border: 1px solid black;
     margin-top: 10px;
 }
+.box {
+    display: inline-block; /* Para que la caja solo ocupe el ancho del texto */
+    background-color: white; /* Color de fondo para visualizar la caja */
+    margin: 0; /* Elimina cualquier margen */
+    padding: 0; /* Elimina cualquier relleno */
+}
